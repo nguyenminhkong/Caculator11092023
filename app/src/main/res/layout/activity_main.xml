@@ -16,28 +16,75 @@
         android:textAllCaps="true"
         android:textColor="#f20"
         android:textSize="30sp"
-        android:textStyle="italic|bold"/>
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/edit_text_number1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Nhập số thứ 1" />
 
     <EditText
-        android:hint="Nhập số thứ 1"
+        android:id="@+id/text_view_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"/>
-    <EditText
-        android:hint="Nhập số thứ 2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:hint="Nhập số thứ 2" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Result: 1 + 1 = 2"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:textSize="30sp"/>
+        android:textColor="#0F53FF"
+        android:textSize="30sp"
+        tools:text="Result: 1 + 1 = 2" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="25sp" />
+            <Button
+                android:id="@+id/button_minus"
+                android:layout_marginLeft="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="25sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button_multiplication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textSize="25sp" />
+            <Button
+                android:id="@+id/button_division"
+                android:layout_marginLeft="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="25sp" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
