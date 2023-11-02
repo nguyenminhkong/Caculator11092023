@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             val textNumber1 = edtNumber1.text.toString()
             val textNumber2 = edtNumber2.text.toString()
             if (textNumber1.isBlank() || textNumber2.isBlank()) {
-                Toast.makeText(this@MainActivity, "Input invalid", Toast.LENGTH_SHORT).show()
+                textViewresult.text = "Input invalid"
                 return@setOnClickListener
             }
             val number1 = textNumber1.toInt()
@@ -49,6 +49,51 @@ class MainActivity : AppCompatActivity() {
         btnminos.setOnClickListener {
             val textNumber1 = edtNumber1.text.toString()
             val textNumber2 = edtNumber2.text.toString()
+            if (textNumber1.isBlank() || textNumber2.isBlank()) {
+                textViewresult.text = "Input invalid"
+                return@setOnClickListener
+            }
+            val number1 = textNumber1.toInt()
+            val number2 = textNumber2.toInt()
+            val result = number1 - number2
+            val textDisplay = "$number1 - $number2 = $result"
+            textViewresult.text = textDisplay
         }
-    }
+        btnmultiplication.setOnClickListener {
+            val textNumber1 = edtNumber1.text.toString()
+            val textNumber2 = edtNumber2.text.toString()
+            if (textNumber1.isBlank() || textNumber2.isBlank()) {
+                textViewresult.text = "Input invalid"
+                return@setOnClickListener
+            }
+            val number1 = textNumber1.toInt()
+            val number2 = textNumber2.toInt()
+            val result = number1 * number2
+            val textDisplay = "$number1 * $number2 = $result"
+            textViewresult.text = textDisplay
+        }
+        btndivision.setOnClickListener {
+            val textNumber1 = edtNumber1.text.toString()
+            val textNumber2 = edtNumber2.text.toString()
+            if (textNumber1.isBlank() || textNumber2.isBlank()) {
+                textViewresult.text = "Input invalid"
+                return@setOnClickListener
+            try {
+                 val number1 = textNumber1.toInt()
+                 val number2 = textNumber2.toInt()
+                 val result = number1 / number2
+                 val textDisplay = "$number1 * $number2 = $result"
+                 textViewresult.text = textDisplay
+            }catch (e: Exception) {}
+            }
+            val number1 = textNumber1.toInt()
+            val number2 = textNumber2.toInt()
+            val result = number1 / number2
+            val textDisplay = "$number1 / $number2 = $result"
+            if (number2==0)
+                textViewresult.text = "No valid"
+            else textViewresult.text = textDisplay
+            }
+        }
 }
+
